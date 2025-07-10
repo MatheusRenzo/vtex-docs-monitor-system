@@ -76,7 +76,7 @@ class Application(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("VTEX Dock Monitoring System")
-        self.geometry("900x700")
+        self.geometry("900x900")
         self.resizable(True, True)
         self.protocol("WM_DELETE_WINDOW", self.on_close)
         
@@ -111,7 +111,7 @@ class Application(tk.Tk):
         ttk.Entry(cred_frame, textvariable=self.app_token, width=50, show="*").grid(row=1, column=1, sticky=tk.EW, padx=5)
         
         # Frame de lojas
-        store_frame = ttk.LabelFrame(main_frame, text="Store List", padding="10")
+        store_frame = ttk.LabelFrame(main_frame, text="account list (em coluna, sem virgulas)", padding="10")
         store_frame.pack(fill=tk.BOTH, expand=True, pady=5)
         
         self.store_text = scrolledtext.ScrolledText(
